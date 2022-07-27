@@ -1,12 +1,15 @@
+const lightOn = "./assets/img/lightOn.png";
+const lightOff = "./assets/img/lightOff.png";
+
 function changeSwitch (buttonId) {
 	var switchId = document.getElementById(buttonId).innerHTML;
 	if (switchId == "On") {
 		document.getElementById(buttonId).innerHTML = "Off";
-		document.getElementById("light1").src = "./assets/img/lightOn.png";
+		document.getElementById("light1").src = lightOn;
 	}
 	else if (switchId == "Off") {
 		document.getElementById(buttonId).innerHTML = "On";
-		document.getElementById("light1").src = "./assets/img/lightOff.png";
+		document.getElementById("light1").src = lightOff;
 	}
 }
 
