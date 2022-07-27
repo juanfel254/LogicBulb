@@ -3,48 +3,63 @@
 	--black: #000000;
 	--very-light-pink: #C7C7C7;
 	--text-input-field: #F7F7F7;
-	--hospital-green: #ACD9B2;
+	--green: #41d72f;
 	--sm: 14px;
 	--md: 16px;
 	--lg: 18px;
 }
+
 html {
 	height: 100%;
 }
+
 body {
 	font-family: 'Quicksand', sans-serif;
-	height: 100%;
 	text-align: center;
-}
-div {
+	background-color: #b5b2b2;
 	height: 100%;
+	margin-bottom: 20px;
 }
 .house-container {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
 }
-h1 {
-	margin: 25px 0;
+.main-title {
+	margin: 0;
+	font-size: 30px;
+	color: var(--white);
 }
 .floor-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
-	margin: 20px 0;
+	/*height: 100%;*/
+	padding: 10px 0;
+	border: 1px solid var(--white);
+	border-radius: 10px;
+	background-color: var(--white);
+	width: 283px;
 }
-.floor-desc {
+.floor-container img {
+	width: 45px;
+	margin: 10px 0;
+}
+.floor-name {
+	margin: 0;
+	font-size: 18px;
+}
+.floor-switches {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	gap: 38px;
 }
-h2 {
-	margin: 0;
-}
-.floor-desc button {
-	background-color: var(--hospital-green);
+.floor-switches .light-switch button {
+	background-color: var(--green);
 	border-radius: 8px;
 	border: none;
 	color: var(--white);
@@ -52,5 +67,10 @@ h2 {
 	cursor: pointer;
 	font-size: var(--md);
 	font-weight: bold;
-	height: 40px;
+	height: 30px;
+}
+.light-switch {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
 }
