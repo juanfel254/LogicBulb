@@ -3,6 +3,7 @@
 	--black: #000000;
 	--very-light-pink: #C7C7C7;
 	--text-input-field: #F7F7F7;
+	--red: #e93d3d;
 	--green: #41d72f;
 	--sm: 14px;
 	--md: 16px;
@@ -58,8 +59,8 @@ body {
 	align-items: center;
 	gap: 38px;
 }
-.floor-switches .light-switch button {
-	background-color: var(--green);
+button {
+	background-color: var(--red);
 	border-radius: 8px;
 	border: none;
 	color: var(--white);
@@ -68,6 +69,7 @@ body {
 	font-size: var(--md);
 	font-weight: bold;
 	height: 30px;
+	transition: all 0.3s;
 }
 .light-switch {
 	display: flex;
