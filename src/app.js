@@ -5,7 +5,7 @@ function changeSwitch (buttonId) {
 	var switchId = document.getElementById(buttonId).innerHTML;
 	if (switchId == "On") {
 		document.getElementById(buttonId).innerHTML = "Off";
-		document.getElementById("light1").src = lightOn;
+		document.getElementById("light1").src = lightOn; // Not working cus the light number
 	}
 	else if (switchId == "Off") {
 		document.getElementById(buttonId).innerHTML = "On";
