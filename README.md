@@ -9,3 +9,7 @@ I made an app that simulates my house stubborn light bulbs.
 Not rocket science coding, just a simple way for the world to know what I have to deal with everyday :p
 
 Just for fun (for now).
+
+### To run it:
+
+Open /src/index.html on any web browser of choice ;)
