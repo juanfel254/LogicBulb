@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/styles/styles.css">
+	<script src="./app.js"></script>
+	<title>LogicBulb</title>
+</head>
+<body>
+  <div class="house-container">
+    <h1 class="main-title">LogicBulb 💡</h1>
+    <div class="floor-container">
+      <h2 class="floor-name">3rd Floor - Light C</h2>
+      <img id="light3" src="/assets/img/lightOff.png" alt="Light bulb">
+      <div class="floor-switches">
+        <div class="light-switch">
+          <label for="switch5">Light C</label>
+          <button id="switch5" type="button" onclick="changeSwitch('switch1')">On</button>
+        </div>
+      </div>
+    </div>
+    <div class="floor-container">
+      <h2 class="floor-name">2nd Floor - Light B</h2>
+      <img id="light2" src="/assets/img/lightOff.png" alt="Light bulb">
+      <div class="floor-switches">
+        <div class="light-switch">
+          <label for="switch4">Light C</label>
+          <button id="switch4" type="button" onclick="changeSwitch('switch1')">On</button>
+        </div>
+        <div class="light-switch">
+          <label for="switch3">Light B</label>
+          <button id="switch3" type="button" onclick="changeSwitch('switch1')">On</button>
+        </div>
+      </div>
+    </div>
+    <div class="floor-container">
+      <h2 class="floor-name">1st Floor - Light A</h2>
+      <img id="light1" src="/assets/img/lightOff.png" alt="Light bulb">
+      <div class="floor-switches">
+        <div class="light-switch">
+          <label for="switch2">Light B</label>
+          <button id="switch2" type="button" onclick="changeSwitch('switch1')">On</button>
+        </div>
+        <div class="light-switch">
+          <label for="switch1">Light A</label>
+          <button id="switch1" type="button" onclick="changeSwitch('switch1')">On</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
-const lightOn = "./assets/img/lightOn.png";
-const lightOff = "./assets/img/lightOff.png";
+const lightOn = "/assets/img/lightOn.png";
+const lightOff = "/assets/img/lightOff.png";
 
 function changeSwitch (buttonId) {
 	var switchId = document.getElementById(buttonId).innerHTML;
