@@ -7,11 +7,11 @@
 	"settings": {
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#b4bab9",
-			"activityBar.activeBorder": "#ff0000",
+			"activityBar.activeBorder": "#b558c7",
 			"activityBar.background": "#b4bab9",
 			"activityBar.foreground": "#15202b",
 			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#ff5f5f",
+			"activityBarBadge.background": "#b558c7",
 			"activityBarBadge.foreground": "#15202b",
 			"editorGroup.border": "#b4bab9",
 			"panel.border": "#b4bab9",
