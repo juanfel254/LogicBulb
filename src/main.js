@@ -1,4 +1,3 @@
-//import {house} from "./house.js";
 const floor1 = {
 		switch1: document.getElementById('switch1'),
 		switch2: document.getElementById('switch2'),
@@ -6,7 +5,7 @@ const floor1 = {
 	};
 const floor2 = {
 		switch1: document.getElementById('switch3'),
-		switch1: document.getElementById('switch3'),
+		switch2: document.getElementById('switch2'),
 		light: document.getElementById('light2')
 	};
 const floor3 = {
@@ -16,11 +15,11 @@ const floor3 = {
 
 const address = "http://127.0.0.1:5500";
 const lightOn = address + "/assets/img/lightOn.png" 
-const lightOff = address + "/assets/img/lightOff.png";  
+const lightOff = address +  "/assets/img/lightOff.png";  
 const red = "#e93d3d", green = "#41d72f";
 
 //Since this gets an array of elements, an special addEventListener is needed. 
-var lightSwitches = document.getElementsByClassName('the-lightSwitch');
+let lightSwitches = document.getElementsByClassName('the-lightSwitch');
 
 // 4. Turn On/Off an specific light
 function changeLight(floorNum) {
