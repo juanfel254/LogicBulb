@@ -12,4 +12,4 @@ Just for fun (for now).
 
 ### To run it:
 
-Open /src/index.html on any web browser of choice ;)
+https://logicbulb.netlify.app/src/ or open /src/index.html on any web browser of choice ;)
