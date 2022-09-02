@@ -13,9 +13,9 @@ const floor3 = {
 		light: document.getElementById('light3')
 	};
 
-const address = "http://127.0.0.1:5500";
-const lightOn = address + "./assets/img/lightOn.png"; 
-const lightOff = address +  "./assets/img/lightOff.png";  
+const base_url = window.location.origin + "/src";
+const lightOn = base_url + "/assets/img/lightOn.png"; 
+const lightOff =  base_url + "/assets/img/lightOff.png";  
 const red = "#e93d3d", green = "#41d72f";
 
 //Since this gets an array of elements, an special addEventListener is needed. 
@@ -23,10 +23,12 @@ let lightSwitches = document.getElementsByClassName('the-lightSwitch');
 
 // 4. Turn On/Off an specific light
 function changeLight(floorNum) {
+	
+	console.log(floorNum.light.src, lightOn, lightOff)
 	if (floorNum.light.src == lightOn) {
 		floorNum.light.src = lightOff; 
 	}
-	else if (floor1.light.src == lightOff) {
+	else if (floorNum.light.src == lightOff) {
 		floorNum.light.src = lightOn;
 	}
 };
