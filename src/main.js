@@ -13,9 +13,9 @@ const floor3 = {
 		light: document.getElementById('light3')
 	};
 
-const address = "..";
-const lightOn = address + "/assets/img/lightOn.png" 
-const lightOff = address +  "/assets/img/lightOff.png";  
+const address = "http://127.0.0.1:5500";
+const lightOn = address + "./assets/img/lightOn.png"; 
+const lightOff = address +  "./assets/img/lightOff.png";  
 const red = "#e93d3d", green = "#41d72f";
 
 //Since this gets an array of elements, an special addEventListener is needed. 
