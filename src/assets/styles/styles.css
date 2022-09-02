@@ -19,7 +19,7 @@ body {
 	text-align: center;
 	background-color: #b5b2b2;
 	height: 100%;
-	margin-bottom: 20px;
+	margin: 0;
 }
 .house-container {
 	display: flex;
@@ -28,6 +28,11 @@ body {
 	align-items: center;
 	height: 100%;
 }
+.house-container h3 {
+	font-size: 1.6vh;
+	margin: 0;
+}
+
 .main-title {
 	margin: 0;
 	font-size: 30px;
