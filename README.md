@@ -1,4 +1,4 @@
-# LogicBulb 💡 (alpha v1.0.0)
+# LogicBulb 💡
 
 My house has a weird circuit problem related to the light bulbs of the stairs between floors. 
 These things don't work as you would normally expect, some annoying logic conditions are required for them to light your way. 
