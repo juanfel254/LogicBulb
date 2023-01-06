@@ -13,3 +13,5 @@ Just for fun (for now).
 ### To run it:
 
 https://logicbulb.netlify.app/src/ or open /src/index.html on any web browser of choice ;)
+
+![WhatsApp Image 2023-01-06 at 1 19 44 AM](https://user-images.githubusercontent.com/85968522/210942296-6dee7b27-055a-43d9-8f3b-c17dccbbdce9.jpeg)
