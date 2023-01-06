@@ -5,7 +5,7 @@ const floor1 = {
 	};
 const floor2 = {
 		switch1: document.getElementById('switch3'),
-		switch2: document.getElementById('switch2'),
+		switch2: document.getElementById('switch4'),
 		light: document.getElementById('light2')
 	};
 const floor3 = {
@@ -13,9 +13,9 @@ const floor3 = {
 		light: document.getElementById('light3')
 	};
 
-const base_url = window.location.origin + "/src";
-const lightOn = base_url + "/assets/img/lightOn.png"; 
-const lightOff =  base_url + "/assets/img/lightOff.png";  
+const baseUrl = document.URL;
+const lightOn = `./img/lightOn.png`; 
+const lightOff =  `./img/lightOff.png`;  
 const red = "#e93d3d", green = "#41d72f";
 
 //Since this gets an array of elements, an special addEventListener is needed. 
@@ -23,26 +23,16 @@ let lightSwitches = document.getElementsByClassName('the-lightSwitch');
 
 // 4. Turn On/Off an specific light
 function changeLight(floorNum) {
-	
-	console.log(floorNum.light.src, lightOn, lightOff)
-	if (floorNum.light.src == lightOn) {
-		floorNum.light.src = lightOff; 
-	}
-	else if (floorNum.light.src == lightOff) {
-		floorNum.light.src = lightOn;
-	}
+	let lightId = floorNum.light.id;
+	let nextLightState = document.getElementById(lightId).src.includes('On') ? lightOff : lightOn;
+	document.getElementById(lightId).src = nextLightState;
 };
 
 // 3. Change the switch style 
 function changeSwitch(switchBtn) {
-	if (switchBtn.innerText == 'Off') {
-		switchBtn.innerText = 'On';
-		switchBtn.style.backgroundColor = green;
-	}
-	else if (switchBtn.innerText == 'On') {
-		switchBtn.innerText = 'Off';
-		switchBtn.style.backgroundColor = red;
-	}
+	let buttonState = switchBtn.innerText;
+	switchBtn.style.backgroundColor = buttonState.includes('On') ? red : green;
+	switchBtn.innerText = buttonState.includes('On') ? 'Off' : 'On';
 }
 
 // 2. Call function to change switch and check which light to turn
