@@ -16,49 +16,8 @@
 	<!-- Babel Script -->
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
-  <script type="text/jsx">
-    const app = document.getElementById("app");
+  <script type="text/jsx" src="./app.jsx">
 
-    function Floor(props){
-      const lightOn = "./img/lightOn.png"; 
-      const lightOff =  "./img/lightOff.png";  
-      const red = "#e93d3d", green = "#41d72f";
-      
-      const [light, setLight] = React.useState(lightOff);
-      const [floorSwitch, setFloorSwitch] = React.useState("Off");
-
-      function handleClick(){
-         if (floorSwitch == "Off"){
-          setLight("./img/lightOn.png");
-          setFloorSwitch("On");
-         }
-         else {
-          setLight("./img/lightOff.png");
-          setFloorSwitch("Off");
-         }
-      }
-
-      return (
-        <div className="floor-container">
-          <h2 className="floor-name">Floor {props.floorNumber}</h2>
-          <img src={light} alt="Lightbulb"/>
-          <button id={`switch${props.floorNumber}`} onClick={handleClick}>{floorSwitch}</button>
-        </div>
-      );
-    }
-
-    function Home(){
-      return(
-        <div className="home-container">
-          <h1>💡 LogicBulb</h1>
-          <Floor floorNumber="3"/>
-          <Floor floorNumber="2"/>
-          <Floor floorNumber="1"/>
-        </div>
-      );
-    }
-
-    ReactDOM.render(<Home />,app);
   </script>
 </body>
 </html>
