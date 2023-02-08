@@ -94,7 +94,7 @@ function handleSwitchC(){
         <ul className="switches-container">
           <li className="indv-switch-container">
             <label htmlFor="switch-floor2-lightB">light B</label>
-            <button id="switch-floor1-lightB" onClick={handleSwitchB}>{switchB}</button>
+            <button id="switch-floor2-lightB" onClick={handleSwitchB}>{switchB}</button>
           </li>
           <li className="indv-switch-container">
             <label htmlFor="switch-floor2-lightC">light C</label>
