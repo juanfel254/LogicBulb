@@ -1,30 +1,12 @@
 const app = document.getElementById("app");
 
-function Floor(props){
-  const lightOn = "./img/lightOn.png"; 
-  const lightOff =  "./img/lightOff.png";  
-  
-  const [light, setLight] = React.useState(lightOff);
-  const [floorSwitch, setFloorSwitch] = React.useState("Off");
-
-  function handleClick(){
-     if (floorSwitch == "Off"){
-      setLight(lightOn);
-      setFloorSwitch("On");
-     }
-     else {
-      setLight(lightOff);
-      setFloorSwitch("Off");
-     }
-  }
-
+function Switch(props){
   return (
-    <div className="floor-container">
-      <h2 className="floor-name">Floor {props.floorNumber}</h2>
-      <img src={light} alt="Lightbulb"/>
-      <button id={`switch${props.floorNumber}`} onClick={handleClick}>{floorSwitch}</button>
-    </div>
-  );
+    <li className="indv-switch-container">
+      <label htmlFor={`swtich-floor${props.floorNumber}-ligth${props.lightTag}`}>light {props.lightTag}</label>
+      <button id={`swtich-floor${props.floorNumber}-light${props.lightTag}`} onClick={props.swtichSetState}>{props.switchState}</button>
+    </li>
+  )
 }
 
 function House(){
@@ -62,7 +44,7 @@ function House(){
     }
   };
 
-function handleSwitchC(){
+  function handleSwitchC(){
     if (switchC == "Off"){
     setLightC(lightOn);
     setSwitchC("On");
@@ -81,10 +63,12 @@ function handleSwitchC(){
         <h2 className="floor-name">3rd Floor</h2>
         <img src={lightC} alt="Lightbulb" />
         <ul className="switches-container">
-          <li className="indv-switch-container">
-            <label htmlFor="switch-floor3-lightC">light C</label>
-            <button id="switch-floor3-lightC" onClick={handleSwitchC}>{switchC}</button>
-          </li>
+            <Switch 
+            floorNumber="3" 
+            lightTag="C" 
+            switchState={switchC} 
+            swtichSetState={handleSwitchC}
+            />
         </ul>
       </div>
 
@@ -92,14 +76,18 @@ function handleSwitchC(){
         <h2 className="floor-name">2nd Floor</h2>
         <img src={lightB} alt="Lightbulb" />
         <ul className="switches-container">
-          <li className="indv-switch-container">
-            <label htmlFor="switch-floor2-lightB">light B</label>
-            <button id="switch-floor2-lightB" onClick={handleSwitchB}>{switchB}</button>
-          </li>
-          <li className="indv-switch-container">
-            <label htmlFor="switch-floor2-lightC">light C</label>
-            <button id="switch-floor2-lightC" onClick={handleSwitchC}>{switchC}</button>
-          </li>
+            <Switch 
+              floorNumber="2" 
+              lightTag="B" 
+              switchState={switchB} 
+              swtichSetState={handleSwitchB}
+            />
+            <Switch 
+              floorNumber="2" 
+              lightTag="C" 
+              switchState={switchC} 
+              swtichSetState={handleSwitchC}
+            />
         </ul>
       </div>
 
@@ -107,17 +95,20 @@ function handleSwitchC(){
         <h2 className="floor-name">1st Floor</h2>
         <img src={lightA} alt="Lightbulb" />
         <ul className="switches-container">
-          <li className="indv-switch-container">
-            <label htmlFor="switch-floor1-lightA">light A</label>
-            <button id="switch-floor1-lightA" onClick={handleSwitchA}>{switchA}</button>
-          </li>
-          <li className="indv-switch-container">
-            <label htmlFor="switch-floor1-lightB">light B</label>
-            <button id="switch-floor1-lightB" onClick={handleSwitchB}>{switchB}</button>
-          </li>
+          <Switch 
+            floorNumber="1" 
+            lightTag="A" 
+            switchState={switchA} 
+            swtichSetState={handleSwitchA}
+          />
+          <Switch 
+            floorNumber="1" 
+            lightTag="B" 
+            switchState={switchB} 
+            swtichSetState={handleSwitchB}
+          />
         </ul>
       </div>
-
     </div>
   );
 }
