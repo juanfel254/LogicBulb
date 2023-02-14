@@ -4,56 +4,20 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./styles/styles.css">
   <link rel="icon" href="./img/favicon-32x32.png">
 	<title> LogicBulb</title>
 </head>
 <body>
-  <div class="house-container">
-    <h1 class="main-title">💡 LogicBulb</h1>
-    <h3> ÜNmaker 💚 - Juan Felipe Parra Runceria </h3>
-    <div class="floor-container">
-      <h2 class="floor-name">3rd Floor - Light C</h2>
-      <img id="light3" src="./img/lightOff.png" alt="Light bulb">
-      <div class="floor-switches">
-        <div class="light-switch">
-          <label for="switch5">Light C</label>
-          <button class="the-lightSwitch" id="switch5" type="button">Off</button>
-        </div>
-      </div>
-    </div>
-    <div class="floor-container">
-      <h2 class="floor-name">2nd Floor - Light B</h2>
-      <img id="light2" src="./img/lightOff.png" alt="Light bulb">
-      <div class="floor-switches">
-        <div class="light-switch">
-          <label for="switch4">Light C</label>
-          <button class="the-lightSwitch" id="switch4" type="button">Off</button>
-        </div>
-        <div class="light-switch">
-          <label for="switch3">Light B</label>
-          <button class="the-lightSwitch" id="switch3" type="button">Off</button>
-        </div>
-      </div>
-    </div>
-    <div class="floor-container">
-      <h2 class="floor-name">1st Floor - Light A</h2>
-      <img id="light1" src="./img/lightOff.png" alt="Light bulb">
-      <div class="floor-switches">
-        <div class="light-switch">
-          <label for="switch2">Light B</label>
-          <button class="the-lightSwitch" id="switch2" type="button">Off</button>
-        </div>
-        <div class="light-switch">
-          <label for="switch1">Light A</label>
-          <button class="the-lightSwitch" id="switch1" type="button">Off</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="./main.js"></script>
+  <div id="app"></div>
+  
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+	<!-- Babel Script -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <script type="text/jsx" src="./app.jsx">
+
+  </script>
 </body>
 </html>
