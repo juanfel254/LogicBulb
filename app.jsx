@@ -14,7 +14,7 @@ function Switch(props){
 }
 
 function House(){
-  
+
   const lightOn = "./img/lightOn.png", lightOff =  "./img/lightOff.png" ; 
 
   const [lightA, setLightA] = React.useState(lightOff);
@@ -64,7 +64,7 @@ function House(){
       <h1 className="main-title">💡 LogicBulb</h1>
 
       <div className="floor-container">
-        <h2 className="floor-name">3rd Floor</h2>
+        <h2 className="floor-name">3rd Floor - Light C</h2>
         <img src={lightC} alt="Lightbulb" />
         <ul className="switches-container">
             <Switch 
@@ -77,7 +77,7 @@ function House(){
       </div>
 
       <div className="floor-container">
-        <h2 className="floor-name">2nd Floor</h2>
+        <h2 className="floor-name">2nd Floor - Light B</h2>
         <img src={lightB} alt="Lightbulb" />
         <ul className="switches-container">
             <Switch 
@@ -96,7 +96,7 @@ function House(){
       </div>
 
       <div className="floor-container">
-        <h2 className="floor-name">1st Floor</h2>
+        <h2 className="floor-name">1st Floor - Light A</h2>
         <img src={lightA} alt="Lightbulb" />
         <ul className="switches-container">
           <Switch 
