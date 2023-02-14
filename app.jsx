@@ -1,21 +1,31 @@
 const app = document.getElementById("app");
+const lightOn = "./img/lightOn.png", lightOff =  "./img/lightOff.png" ; 
 
 function Switch(props){
+
+  function handleSwitch() {
+    if (!props.switchState){
+      props.lightSetState(lightOn);
+      props.switchSetState(true);
+    } else {
+      props.lightSetState(lightOff);
+      props.switchSetState(false);
+    }
+  }
+
   return (
     <li className="indv-switch-container">
       <label htmlFor={`swtich-floor${props.floorNumber}-ligth${props.lightTag}`}>light {props.lightTag}</label>
       <button 
         className={!props.switchState ? "background-red" : "background-green"}
         id={`swtich-floor${props.floorNumber}-light${props.lightTag}`} 
-        onClick={props.swtichSetState}>{props.switchState ? "On" : "Off"}
+        onClick={handleSwitch}>{props.switchState ? "On" : "Off"}
       </button>
     </li>
   )
 }
 
 function House(){
-
-  const lightOn = "./img/lightOn.png", lightOff =  "./img/lightOff.png" ; 
 
   const [lightA, setLightA] = React.useState(lightOff);
   const [lightB, setLightB] = React.useState(lightOff);
@@ -25,91 +35,62 @@ function House(){
   const [switchB, setSwitchB] = React.useState(false);
   const [switchC, setSwitchC] = React.useState(false);
 
-  function handleSwitchA(){
-
-    if (!switchA){
-     setLightA(lightOn);
-     setSwitchA(true);
-    }
-    else {
-     setLightA(lightOff);
-     setSwitchA(false);
-    }
-  };
-
- function handleSwitchB(){
-    if (!switchB){
-    setLightB(lightOn);
-    setSwitchB(true);
-    }
-    else {
-    setLightB(lightOff);
-    setSwitchB(false);
-    }
-  };
-
-  function handleSwitchC(){
-    if (!switchC){
-    setLightC(lightOn);
-    setSwitchC(true);
-    }
-    else {
-    setLightC(lightOff);
-    setSwitchC(false);
-    }
-  };
-
   return(
-    <div className="house-container">
-      <h1 className="main-title">💡 LogicBulb</h1>
+    <div className = "house-container">
+      <h1 className = "main-title">💡 LogicBulb</h1>
 
-      <div className="floor-container">
-        <h2 className="floor-name">3rd Floor - Light C</h2>
-        <img src={lightC} alt="Lightbulb" />
-        <ul className="switches-container">
+      <div className = "floor-container">
+        <h2 className = "floor-name">3rd Floor - Light C</h2>
+        <img src = {lightC} alt = "Lightbulb" />
+        <ul className = "switches-container">
             <Switch 
-            floorNumber="3" 
-            lightTag="C" 
-            switchState={switchC} 
-            swtichSetState={handleSwitchC}
+            floorNumber = "3" 
+            lightTag = "C" 
+            switchState  =  {switchC} 
+            lightSetState  =  {setLightC}
+            switchSetState = {setSwitchC}
             />
         </ul>
       </div>
 
-      <div className="floor-container">
-        <h2 className="floor-name">2nd Floor - Light B</h2>
-        <img src={lightB} alt="Lightbulb" />
-        <ul className="switches-container">
+      <div className = "floor-container">
+        <h2 className = "floor-name">2nd Floor - Light B</h2>
+        <img src = {lightB} alt = "Lightbulb" />
+        <ul className = "switches-container">
             <Switch 
-              floorNumber="2" 
-              lightTag="B" 
-              switchState={switchB} 
-              swtichSetState={handleSwitchB}
+              floorNumber = "2" 
+              lightTag = "B" 
+              switchState = {switchB} 
+              lightSetState  =  {setLightB}
+              switchSetState = {setSwitchB}
             />
             <Switch 
-              floorNumber="2" 
-              lightTag="C" 
-              switchState={switchC} 
-              swtichSetState={handleSwitchC}
+              floorNumber = "2" 
+              lightTag = "C" 
+              switchState = {switchC} 
+              lightSetState  =  {setLightC}
+              switchSetState = {setSwitchC}
             />
         </ul>
       </div>
 
-      <div className="floor-container">
-        <h2 className="floor-name">1st Floor - Light A</h2>
-        <img src={lightA} alt="Lightbulb" />
-        <ul className="switches-container">
+      <div className = "floor-container">
+        <h2 className = "floor-name">1st Floor - Light A</h2>
+        <img src = {lightA} alt = "Lightbulb" />
+        <ul className = "switches-container">
           <Switch 
-            floorNumber="1" 
-            lightTag="A" 
-            switchState={switchA} 
-            swtichSetState={handleSwitchA}
+            floorNumber = "1" 
+            lightTag = "A" 
+            switchState = {switchA} 
+            lightSetState  =  {setLightA}
+            switchSetState = {setSwitchA}
           />
           <Switch 
-            floorNumber="1" 
-            lightTag="B" 
-            switchState={switchB} 
-            swtichSetState={handleSwitchB}
+            floorNumber = "1" 
+            lightTag = "B" 
+            switchState = {switchB} 
+            lightSetState  =  {setLightB}
+            switchSetState = {setSwitchB}
           />
         </ul>
       </div>
