@@ -1,10 +1,15 @@
 const app = document.getElementById("app");
 
 function Switch(props){
+
   return (
     <li className="indv-switch-container">
       <label htmlFor={`swtich-floor${props.floorNumber}-ligth${props.lightTag}`}>light {props.lightTag}</label>
-      <button id={`swtich-floor${props.floorNumber}-light${props.lightTag}`} onClick={props.swtichSetState}>{props.switchState}</button>
+      <button 
+        className={props.switchState == "Off" ? "background-red" : "background-green"}
+        id={`swtich-floor${props.floorNumber}-light${props.lightTag}`} 
+        onClick={props.swtichSetState}>{props.switchState}
+      </button>
     </li>
   )
 }

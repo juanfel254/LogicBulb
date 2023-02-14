@@ -25,6 +25,8 @@ body {
   margin: 0;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(34, 203, 122, 1) 100%);
+  display: flex;
+  justify-content: center;
 }
 
 .main-title {
@@ -95,4 +97,11 @@ button {
 button:focus {
   outline: none;
   box-shadow: none;
+}
+
+.background-red {
+  background-color: var(--red);
+}
+.background-green {
+  background-color: var(--green);
 }
