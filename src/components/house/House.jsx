@@ -1,39 +1,18 @@
-const app = document.getElementById("app");
-const lightOn = "./img/lightOn.png", lightOff =  "./img/lightOff.png" ; 
+import React, { useState } from 'react';
+import "./House.css"
+import Switch from './switch/Switch.jsx';  
+import lightOff from  "./img/lightOff.png";
+import lightOn from "./img/lightOn.png"; 
 
-function Switch(props){
+export default function House(){
 
-  function handleSwitch() {
-    if (!props.switchState){
-      props.lightSetState(lightOn);
-      props.switchSetState(true);
-    } else {
-      props.lightSetState(lightOff);
-      props.switchSetState(false);
-    }
-  }
+  const [lightA, setLightA] = useState(lightOff);
+  const [lightB, setLightB] = useState(lightOff);
+  const [lightC, setLightC] = useState(lightOff);
 
-  return (
-    <li className="indv-switch-container">
-      <label htmlFor={`swtich-floor${props.floorNumber}-ligth${props.lightTag}`}>light {props.lightTag}</label>
-      <button 
-        className={!props.switchState ? "background-red" : "background-green"}
-        id={`swtich-floor${props.floorNumber}-light${props.lightTag}`} 
-        onClick={handleSwitch}>{props.switchState ? "On" : "Off"}
-      </button>
-    </li>
-  )
-}
-
-function House(){
-
-  const [lightA, setLightA] = React.useState(lightOff);
-  const [lightB, setLightB] = React.useState(lightOff);
-  const [lightC, setLightC] = React.useState(lightOff);
-
-  const [switchA, setSwitchA] = React.useState(false);
-  const [switchB, setSwitchB] = React.useState(false);
-  const [switchC, setSwitchC] = React.useState(false);
+  const [switchA, setSwitchA] = useState(false);
+  const [switchB, setSwitchB] = useState(false);
+  const [switchC, setSwitchC] = useState(false);
 
   return(
     <div className = "house-container">
@@ -97,5 +76,3 @@ function House(){
     </div>
   );
 }
-
-ReactDOM.render(<House />,app);
