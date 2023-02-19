@@ -1,0 +1,36 @@
+.main-title {
+  margin: 0;
+  font-size: 30px;
+  color: var(--white);
+}
+
+.house-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.floor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*height: 100%;*/
+  margin: 10px 0;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  background-color: var(--white);
+  width: 283px;
+}
+
+.floor-container img {
+  width: 40px;
+  margin: 4px 0 0 0;
+}
+
+.floor-name {
+  margin: 8px 0 0 0;
+  font-size: 18px;
+}
