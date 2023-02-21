@@ -3,22 +3,34 @@ import Light from './light/Light.jsx';
 import lightOff from  "../img/lightOff.png" ; 
 import lightOn from "../img/lightOn.png";  
 
-export default function Floor({ floorNumber }){
+export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, setLightB }){
 
-  const [light, setLight] = useState(false);
-  const lightTag = String.fromCharCode(parseInt(floorNumber)+64);
-
+  const lightTagA = String.fromCharCode(parseInt(floorNumber)+64);
+  
+  function checkDual() {
+    if (dual) {
+      const lightTagB = String.fromCharCode(parseInt(floorNumber)+65);
+      return (
+      <Light 
+        floorNumber={floorNumber}
+        lightTag = {lightTagB}
+        lightState = {lightB}
+        lightSetState = {setLightB}
+      />)
+    }
+  }
   return (
     <div className = "floor-container">
-    <h2 className = "floor-name">Floor {floorNumber} - Light {lightTag}</h2>
-    <img src = {light ? lightOn : lightOff} alt = "Lightbulb" />
+    <h2 className = "floor-name">Floor {floorNumber} - Light {lightTagA}</h2>
+    <img src = {lightA ? lightOn : lightOff} alt = "Lightbulb" />
     <ul className = "switches-container">
         <Light 
         floorNumber = {floorNumber} 
-        lightTag = {lightTag} 
-        lightState  =  {light} 
-        lightSetState  =  {setLight}
+        lightTag = {lightTagA} 
+        lightState  =  {lightA} 
+        lightSetState  =  {setLightA}
         />
+        {checkDual()}
     </ul>
   </div>
   )
