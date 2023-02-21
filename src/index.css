@@ -12,7 +12,9 @@
   --lg: 18px;
 }
 
-html {
+html,
+#root,
+.App {
   height: 100%;
 }
 
