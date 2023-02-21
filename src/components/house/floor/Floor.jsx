@@ -6,7 +6,7 @@ export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, se
 
   const lightTagA = String.fromCharCode(parseInt(floorNumber)+64);
   
-  function checkDual() {
+  const checkDual = () => {
     if (dual) {
       const lightTagB = String.fromCharCode(parseInt(floorNumber)+65);
       return (
@@ -18,6 +18,7 @@ export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, se
       />)
     }
   }
+  
   return (
     <div className = "floor-container">
     <h2 className = "floor-name">Floor {floorNumber} - Light {lightTagA}</h2>
