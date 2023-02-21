@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Light from './light/Light.jsx';
 import lightOff from  "../img/lightOff.png" ; 
 import lightOn from "../img/lightOn.png";  
