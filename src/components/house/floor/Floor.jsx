@@ -1,6 +1,7 @@
 import Light from './light/Light.jsx';
 import lightOff from  "../img/lightOff.png" ; 
 import lightOn from "../img/lightOn.png";  
+import "./Floor.css";
 
 export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, setLightB }){
 
@@ -20,8 +21,8 @@ export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, se
   }
   
   return (
-    <div className = "floor-container">
-    <h2 className = "floor-name">Floor {floorNumber} - Light {lightTagA}</h2>
+    <div className = {`floor-container ${lightA ? "day-background": "night-background"}`}>
+    <h2 className = {`floor-name ${lightA ? "night" : "day"}`}>Floor {floorNumber} - Light {lightTagA}</h2>
     <img src = {lightA ? lightOn : lightOff} alt = "Lightbulb" />
     <ul className = "switches-container">
         <Light 
