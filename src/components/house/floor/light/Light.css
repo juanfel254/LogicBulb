@@ -12,6 +12,8 @@
   flex-direction: column;
   gap: 3px;
   color: white;
+  border: 0px solid;
+  border-radius: 8px;
 }
 
 button {

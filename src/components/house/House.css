@@ -13,6 +13,7 @@
 
 .day {
   color: white;
+  background-color: black;
 }
 
 .day-background {
@@ -21,6 +22,7 @@
 
 .night {
   color: black;
+  background-color: white;
 }
 
 .night-background {
