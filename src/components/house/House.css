@@ -1,5 +1,5 @@
 .main-title {
-  margin: 0;
+  margin: 10px 0 0 0;
   font-size: 30px;
   color: var(--white);
 }
@@ -9,28 +9,22 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
 }
 
-.floor-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*height: 100%;*/
-  margin: 10px 0;
-  border: 1px solid var(--white);
-  border-radius: 10px;
-  background-color: var(--white);
-  width: 283px;
+.day {
+  color: white;
+  background-color: black;
 }
 
-.floor-container img {
-  width: 40px;
-  margin: 4px 0 0 0;
+.day-background {
+  background-color: white;
 }
 
-.floor-name {
-  margin: 8px 0 0 0;
-  font-size: 18px;
+.night {
+  color: black;
+  background-color: white;
+}
+
+.night-background {
+  background-color: black;
 }

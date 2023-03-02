@@ -1,0 +1,19 @@
+section.floors-control-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  color: white;
+}
+
+button.floors-control {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 18px;
+  width: 50px;
+}
+
+button.floors-control:hover {
+  background-color: #FFD600;
+}
+
