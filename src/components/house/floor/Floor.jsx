@@ -3,7 +3,7 @@ import lightOff from  "../img/lightOff.png" ;
 import lightOn from "../img/lightOn.png";  
 import "./Floor.css";
 
-export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, setLightB }){
+export default function Floor({ floorNumber, dual, lightA, switchLightA, lightB, switchLightB }){
 
   const lightTagA = String.fromCharCode(parseInt(floorNumber)+64);
   
@@ -15,7 +15,7 @@ export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, se
         floorNumber={floorNumber}
         lightTag = {lightTagB}
         lightState = {lightB}
-        lightSetState = {setLightB}
+        lightSwitchState = {switchLightB}
       />)
     }
   }
@@ -29,7 +29,7 @@ export default function Floor({ floorNumber, dual, lightA, setLightA, lightB, se
         floorNumber = {floorNumber} 
         lightTag = {lightTagA} 
         lightState  =  {lightA} 
-        lightSetState  =  {setLightA}
+        lightSwitchState  =  {switchLightA}
         />
         {checkDual()}
     </ul>

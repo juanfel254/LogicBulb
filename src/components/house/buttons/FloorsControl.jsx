@@ -1,12 +1,6 @@
 import "./FloorsControl.css";
 
-export default function FloorsControl({ floors, setFloors }) {
-  
-  const moreFloors = () => {setFloors( floors += 1);}
-  const lessFloors = () => {
-    if (floors > 0)
-    setFloors (floors -= 1);
-  }
+export default function FloorsControl({ floors, lessFloors, moreFloors }) {
   
   return (
     <section className="floors-control-container">
